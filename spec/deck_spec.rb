@@ -1,29 +1,13 @@
 require 'deck'
 
 describe Deck do
-  subject(:deck) {Deck.new}
+  subject(:deck) { Deck.new }
 
   describe '#initialize' do
     it 'has 52 cards' do
       expect(deck.cards.count).to eq(52)
     end
-
-    # it 'has unique cards' do
-    #   double_cards = []
-    #   SUITS.each do |suit|
-    #     VALUES.each do |value|
-    #       double_cards << double("#{value}_#{suit}", suit: suit, value: value)
-    #     end
-    #   end
-    #
-    #   expect(deck.cards)
-    #
-    #     deck.cards
-    #
-    #   end
-    # end
   end
-
 
   describe '#deal_card' do
     it 'returns a card' do
@@ -42,9 +26,10 @@ describe Deck do
     end
   end
 
-  describe '#shuffle' do
-    it 'has a different order of cards.'
-
-  end
+  # describe '#shuffle'
+  #
+  #
+  #   end
+  # end
 
 end

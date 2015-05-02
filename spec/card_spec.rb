@@ -14,4 +14,20 @@ describe Card do
       expect(card.value).to eq(:ace)
     end
   end
+
+  describe '#==' do
+    context 'cards are equal' do
+      it 'return true' do
+        expect(Card.new(:spades, :ace) == Card.new(:spades, :ace)).to be true
+      end
+    end
+
+    context 'cards are not equal' do
+      it 'returns false' do
+        expect(Card.new(:hearts, :king) == Card.new(:spades, :ace)).to be false
+      end
+    end
+
+
+  end
 end
