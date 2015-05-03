@@ -22,4 +22,8 @@ class Deck
     @cards.pop
   end
 
+  def count
+    @cards.count
+  end
+
 end

@@ -19,7 +19,7 @@ describe Hand do
         double("card4", value: :seven),
         double("card5", value: :two)
       ]
-      expect(hand.high_card.value).to eq(:ace)
+      expect(hand.high_card).to eq(:ace)
     end
   end
 
@@ -59,7 +59,7 @@ describe Hand do
         card,
         double("card2", value: :ace),
         double("card3", value: :ace),
-        double("card4", value: :ace),
+        double("card4", value: :three),
         double("card5", value: :two)
       ]
 
@@ -144,10 +144,10 @@ describe Hand do
     it 'finds a royal flush' do
       hand.cards = [
         card,
-        double("card2", suit: spade, value: :king),
-        double("card3", suit: spade, value: :queen),
-        double("card4", suit: spade, value: :jack),
-        double("card5", suit: spade, value: :ten)
+        double("card2", suit: :spade, value: :king),
+        double("card3", suit: :spade, value: :queen),
+        double("card4", suit: :spade, value: :jack),
+        double("card5", suit: :spade, value: :ten)
       ]
 
       expect(hand.royal_flush).to eq(:ace)
